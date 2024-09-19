@@ -1,0 +1,224 @@
+,"Current status (as of 4/04/2024):   under Construction (with RVA23 & RVB23 updates)  
+// note: only insert new columns after column H (Bill McSpadden programatically imports A-H into other tools)",,,,,,,,,,,,,,,,,,,,,,,"Ecosystem status - tbd, dev, year merged upstreamed/updated, n/a",,,,,,,,
+,,,,,,,,ratified (or expected),,,MAJOR,,Minor,,Minor,,,,,,MAJOR?,,,,,,,,,,,
+extension/base name - best guess,ratification package name,"description (what this does, in English)",IC,extensions included (subsets),"implies 
+(and transitives)",incompatible (and transitive),ratified (y/n),year,date or month or quarter,RVI20,"RVA20 
+(64 only)",,"RVA22 
+(64 only)",,RVI23,RVA23 (64 only),,RVB23 (64 only),,"consistency check that if U is M/O,S is M/O for all years","[draft]
+RVA30
+(64 only)",,,ACT,SAIL,QEMU,SPIKE,GCC,GCC optimized,LLVM,LLVM optimized,binutils
+,,,,,(required prerequisite),,,,,"m - mandatory, 
+i - ""m"", if the ""implies"" column is implemented,
+o - optional, 
+n - non-profile options, 
+p - part of an optional extension but not an optional extension itself",,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,RV32I is only applicable to RVI20 profile,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,Mode,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,U,S,U,S,U,U,S,U,S,,U,S,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+A,original,Atomic Instructions,unpriv,"Zaamo, Zalrsc",,,y,2019,,o,m,m,m,m,o,m,m,m,m,,,,,n,y,y,y,GCC 12,,y,,y
+B,B,Basic Bit Manipulation ,unpriv,"Zba, Zbb, Zbs",,,y,2024,25 Apr,n,n,n,m,m,o,m,m,m,m,,,,,,y,,,,,,,
+C,original,Compressed instructions,priv,,,,y,2019,,o,m,m,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+D,original,"floating point, double-precision (implies F)",unpriv,,F,Zdinx,y,2019,,o,m,m,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+F,original,"floating point, single-precision",unpriv,,Zicsr,Zfinx,y,2019,,o,m,m,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+H,H,hypervisor,unpriv,,S,,y,2021,,n,n,n,n,o,n,n,m,n,o,,,,,n,n,y,y,n/a,,n/a,,y
+M,original,multiply/divide,priv, ,,,y,2019,,o,m,m,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+N,N,user level interrupts,unpriv,,,,n,future,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,n,n,n,,n,,n
+Q,original,"floating point, quad-precision",priv,,,,y,2019,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,n,y,GCC 12,,n,,y
+P,,Packed SIMD (in 64-bit registers),unpriv,,,,n,,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+RERI,RERI,RAS Error Record Interface (non-ISA),priv,,,,y,2024,May,n,n,n,n,n,n,n,n,n,n,,,,,,,,,,,,,
+RV32E,RVE,integer base for RVE32,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,y,y,,tbd,y,,,,n
+RV32I,original,integer base for RVI32,unpriv,,,,y,2019,,m,n,n,n,n,m,n,n,n,n,,,,,n,y,y,y,GCC 7,,y,,y
+RV64E,RVE,integer base for RVE64,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,y,y,,tbd,,,,,n
+RV64I,original,Supervisor Mode,priv,,,,y,?,,n,m,m,m,m,o,m,m,m,m,,,,,n,y,y,y,GCC 7,,y,,y
+S,,"Handling of trap inside trap hanlder (""double"" trap)  [see also Smdbltrp and Ssdbltrp]",priv,,U,,n,(2024),,n,n,m,n,m,?,n,m,n,m,,,,,,,,,,,,,
+Sddbltrp,Double Trap,"Handling of trap inside trap hanlder (""double"" trap)  [see also Smdbltrp and Ssdbltrp]",priv,,,,n,(2024),,n,n,n,n,n,n,n,?,n,?,,,,,,,,,,,,,
+Sdext,,External Debug Architecture,,,,,?,20__,,n,n,n,o,o,o,o,o,o,o,,,,,n,n,,,,,,,
+Sdtrig,,Hardware triggers (watchpoints),,,,,?,20__,,n,n,n,o,o,o,o,o,o,o,,,,,n,dev,,,,,,,
+Shcounterenw,H,"only if H: For any hpmcounter that is not read-only zero, the corresponding bit in hcounteren must be writable",unpriv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Shgatpa,H,"only if H:  For each supported virtual memory scheme SvNN supported in satp, the corresponding hgatp SvNNx4 mode must be supported. The hgatp mode Bare must also be supported.",priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Shtvala,H,only if H: htval must be written with the faulting guest physical address in all circumstances permitted by the ISA.,priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Shvsatpa,H,only if H: All translation modes supported in satp must be supported in vsatp.,priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Shvstvala,H,only if H: vstval must be written in all cases described above for stval.,priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Shvstvecd,H,"only if H:  vstvec.MODE must be capable of holding the value 0 (Direct). When vstvec.MODE=Direct, vstvec.BASE must be capable of holding any valid four-byte-aligned address.",priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Sm1p11,priv 1.11,m mode priv instructions and state,priv,,H,,y,2019,,n,n,n,n,n,n,n,n,n,n,,,,,n,y,y,y,n/a,,,,y
+Sm1p12,priv 1.12,m mode priv instructions and state,priv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,y,,,,,,y
+Sm1p13,priv 1.13,m mode priv instructions and state,priv,,,,y,2021,,n,n,n,n,n,n,n,m,n,m,,,,,n,n,,,,,,,
+Smaia,AIA,Advanced Interrupt Architecture,priv,,,,n,2022,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Smclic,Fast Interrupts,fast interrupt spec,priv,,,,n,(2023),,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,n,n/a,,,,
+Smcdeleg,,Supervisor counter delegation,priv,,,,y,2024,Mar 28,n,n,n,n,n,n,n,n,,,,,,,,n,,,,,,,
+Smcntrpmf,,Counter filtering by Mode,priv,,,,n,,,n,n,n,n,n,n,n,n,,,,,,,,n,,,,,,,
+Smcsrind,,Indirect CSR Access (M-mode),priv,,,,y,2024,Feb,n,n,n,n,n,n,n,n,,,,,,,,n,,,,,,,
+Smdbltrp,Double Trap,"Handling of trap inside trap hanlder (""double"" trap)  [see also Sddbltrp and Ssdbltrp]",priv,,,,n,(2024),,n,n,n,n,n,n,n,?,n,?,,,,,,,,,,,,,
+Smepmp,Enhanced PMP,trusted address map TEE extension,priv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev,dev,Y,y,dev,,,,y
+Smmpm,Zpm,"pointer masking
+(formerly named ""Smmjpm"", and before that part of ""Zjpm"")",priv,,,,n,2024,,n,n,n,n,n,n,n,n,n,n,,m,m,,n,n,,,,,,,
+Smrntt,Smrntt,"Supervisor Domains Access Protection, 
+a.k.a. Memory Tracking Table, a.k.a.""TMP""",priv,,,,n,(2024),,n,n,n,n,n,n,,,,,,,,,n,n,,,,,,,
+Smnpm,Zpm,"pointer masking
+(formerly named ""Smnjpm"", and before that part of ""Zjpm"")",priv,,,,n,2024,,n,n,n,n,n,o,m,m,o,o,,m,m,,n,dev,,,,,,,
+Smpmpmt,,"PMP-base memory types (for cores w/o MMU) (cacheable, uncacheable, etc.)",priv,,Ss1p12,,n,,,n,n,n,n,n,n,n,n,n,n,,?,?,,n,n,y,y,,,,,
+Smrnmi,Smrnmi,resumable non-maskable interrupts,priv,,,,y,2024,June,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Smstateen,State Enable,Enable/disable state access by lower privielege modes (for security reasons),priv,,,,y,2021,,n,n,n,n,o,n,n,o,n,o,,,,,n,n,dev,y,,,,,dev
+Smctr,CTR,"Records recent control flow history, for performance profiling uses",priv,,,,n,2024,Oct,n,n,n,n,n,n,n,n,,n,,,,,y,y,,,,,,,
+Ss1p11,priv 1.11,s mode priv instructions and state,priv,,S-mode,,y,2019,,n,n,m,n,n,n,n,n,n,n,,,,,n,y,y,y,,,,,y
+Ss1p12,priv 1.12,s mode priv instructions and state replaces priv 1.11 in rva22,priv,,S-mode,,y,2021,,n,n,n,n,m,n,n,m,n,m,,,,,n,n,y,,,,,,y
+Ss1p13,priv 1.13,S mode priv instructions and state; replaces priv 1.12 in RVA23,priv,,S-mode,,n,2024,,n,n,n,n,n,n,n,m,n,m,,,,,,n,,,,,,,
+Ssaia,AIA,Supervisor-mode view of the Advanced Interrupt Architecture,priv,,,,n,2022,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Ssccfg,,"Sscntrcfg and Sshpmcfg were merged into Ssccfg.
+Ssccfg is the supervisor portion of Smcdeleg.",priv,,,,y,2024,Mar 28,n,n,n,n,n,n,n,n,,,,,,,,n,,,,,,,
+Ssccptr,profiles,Main memory regions with both the cacheability and coherence PMAs must support hardware page-table reads.,priv,,,,n,2023,,n,n,m,n,m,n,n,m,n,m,,,,,n,n,,,,,,,
+Sscntrcfg,,"per ARC, June 2023: merged into Ssccfg ",priv,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sscofpmf,Count overlow & Filtering,hpm counter overflow & privilege mode filtering,priv,,,,y,2021,,n,n,n,n,o,n,n,m,n,m,,,,,n,n,dev,dev,,,,,dev
+Sscounterenw,profiles,"For any hpmcounter that is not read-only zero, the corresponding bit in scounteren must be writable.",priv,,,,n,2023,,n,n,m,n,o,n,n,m,n,m,,,,,n,n,,,,,,,
+Sscsrind,,Indirect CSR Access (S/VS-mode),priv,,,,y,2024,,n,n,n,n,n,n,n,n,,,,,,,,n,,,,,,,
+Ssctr,CTR,Supervisor portion of Smctr,priv,,,,n,2024,Oct,n,n,n,n,n,n,n,n,n,n,,,,,y,y,,,,,,,
+Ssdbltrp,Double Trap,"Handling of trap inside trap hanlder (""double"" trap)  [see also Sddbltrp and Smdbltrp]",priv,,,,n,(2024),,n,n,n,n,n,n,n,?,n,?,,,,,,,,,,,,,
+Ssdtso,Ssdtso,dynamic total store ordering (see also Ztso),unpriv,,,Ztso,n,,,n,n,n,n,n,o,?,?,?,?,,,,,y,y,,,,,,,
+Sshpmcfg,,"per ARC, June 2023: merged into Ssccfg ",priv,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ssnpm,Zpm,"pointer masking
+(formerly named ""Ssnjpm"", and before that part of ""Zjpm"")",priv,,,,n,2024,,n,n,n,n,n,n,n,o,n,o,,n,m,,n,n,,,,,,,
+Ssptead,,(renamed Svade),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sspm,,Pointer masking in S-mode code,priv,,Smnpm?,,n,2024,,n,n,n,n,n,n,n,o,n,o,,n,?,,,,,,,,,,
+Ssqosid,,Supervisor Quality of Service ID,priv,,Ss1p14,,y,2024,June,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Ssstateeen,State Enable,Supervisor-mode view of the state-enable extension,priv,,H,,y,2021,,n,n,n,n,i,n,n,i,n,i,,,,,n,n,,,,,,,
+Ssstrict,,_____________,priv,,,,n,2024,,n,n,n,n,n,n,n,o,n,o,,,,,,,,,,,,,
+Sstc,time cmp,stimecmp/vstimecmp - s-mode timers so don't need M-mode sbi call,priv,,,,y,2021,,n,n,n,n,o,n,n,m,n,m,,,,,n,n,dev,,,,,,dev
+Sstvala,profiles,"stval must be written with the faulting virtual address for load, store, and instruction page-fault, access-fault, and misaligned exceptions, and for breakpoint exceptions other than those caused by execution of the ebreak or c.ebreak instructions. For illegal-instruction exceptions, stval must be written with the faulting instruction.",priv,,,,n,2023,,n,n,m,n,m,n,n,m,n,m,,,,,dev,n,,,,,,,
+Sstvecd,profiles,"stvec.MODE must be capable of holding the value 0 (Direct). When stvec.MODE=Direct, stvec.BASE must be capable of holding any valid four-byte-aligned address.",priv,,,,n,2023,,n,n,m,n,m,n,n,m,n,m,,,,,n,n,,,,,,,
+Sstvecv,profiles,stvec.MODE=Vectored Hardware Trap Vectoring.,priv,,,,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Ssu32xl,profiles,sstatus.UXL=32,priv,,,,n,2023,,n,n,o,n,n,n,n,n,n,n,,,,,y,y,,,,,,,
+Ssu64xl,profiles,sstatus.UXL=64,priv,,,,n,2023,,n,n,o,n,o,n,n,m,n,m,,,,,y,y,,,,,,,
+Ssube,priv 1.11,sstatus.ube=1 Big-endian user-space.,priv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Supm,Zpm,Pointer masking in U-mode code,unpriv,,Ssnpm?,,n,2024,,n,n,n,n,n,n,n,o,n,o,,n,?,,,,,,,,,,
+Sv32,,Page-Based 32-bit Virtual-Memory System.,priv,,,,y,2019?,,n,n,,n,,,n,,n,,,,,,,y,,,,,,,
+Sv39,priv 1.11,Page-Based 39-bit Virtual-Memory System.,priv,,S-mode,,y,2019,,n,n,m,n,m,n,n,m,n,m,,,,,dev,y,y,y,n/a,,,,dev
+Sv48,priv 1.11,page based 48 bit VM,priv,,S-mode,,y,2019,,n,n,o,n,o,n,n,o,n,o,,,,,dev,y,y,y,n/a,,,,y
+Sv57,priv 1.12,page based 57 bit VM,priv,,S-mode,,y,2021,,n,n,n,n,o,n,n,o,n,o,,,,,n,n,y,,,,,,y
+Svade,profiles,"Page-fault exceptions are raised when a page is accessed when A bit is clear, or written when D bit is clear (renamed from Ssptead)",priv,,H,,n,2023,,n,n,?,n,?,n,n,m,n,m,,,,,n,y,,,,,,,
+Svadu,Svadu,a/d bits update,priv,,,,n,2022,,n,n,n,n,o,n,n,o,n,o,,,,,n,y,,,,,,,
+Svbare,profiles,direct map not VM translation,priv,,,,n,2023,,n,n,m,n,m,n,n,m,n,m,,,,,n,y,,,,,,,
+Svinval,priv 1.12,fast multi-sfence.vma's,priv,,Ss1p12,,y,2021,,n,n,n,n,m,n,n,m,n,m,,,,,n,dev,y,y,,,,,y
+Svnapot,priv 1.12,napot translation contiguity,priv,,Ss1p12,,y,2021,,n,n,n,n,o,n,n,m,n,m,,,,,n,dev,y,y,,,,,
+Svpbmt,priv 1.12,"page-based memory types (e.g. cacheable, uncacheable, etc.)",unpriv,,Ss1p12,,y,2021,,n,n,n,n,m,n,n,m,n,m,,,,,n,n,y,y,,,,,
+Svukte,,Address-Independent Latency of User-Mode Faults to Supervisor Addresses,priv,,,,n,,,n,n,n,n,n,n,n,n,n,n,,,?,,,,,,,,,,
+Svvptc,,SFENCE.VMA not needed in certain trap handlers (for performance).  One possible implementation is to never cache invalid PTEs. Behavioral-only extension (defines no instructions or CSRs).,priv,,,,y,2024,June,n,n,n,n,n,n,n,?,,?,,,?,,,,,,,,,,
+U,,vector,unpriv,,,,y,,,n,n,n,m,?,?,m,?,m,?,X,m,?,,,,,,,,,,
+V,V,,unpriv,,Zicsr?,,y,2021,,n,n,n,o,o,o,m,m,o,o,,m,m,,n,y,,,,,,,
+Za128rs,profiles,"Reservation sets must be contiguous, naturally aligned, and at most 128 bytes in size.",unpriv,,,,n,2023,,n,m,m,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Za64rs,profiles,"Reservation sets must be contiguous, naturally aligned, and at most 64 bytes in size.",unpriv,,,,n,2023,,n,n,n,m,m,o,m,m,m,m,,,,,n,n,,,,,,,
+Zaamo,A,AMOs,unpriv,,,,y,2024,25 Apr,p,p,p,p,p,o,p,p,p,p,,,,,n,y,,,,,,,
+Zabha,,Bye & Halfword atomics ,unpriv,,,,y,2024,25 Apr,n,n,n,n,n,,o,o,o,o,,,,,,y,,,,,,,
+Zacas,,Atomic CAS (Compare-And-Swap),unpriv,,,,n,2023,,n,n,n,n,n,o,o,o,o,o,,m,m,,,dev,,,,,,,
+Zalrsc,A,LR/Store Conditional atomics,unpriv,,,,y,2024,25 Apr,p,p,p,p,p,o,p,p,p,p,,,,,n,y,,,,,,,
+Zama16b,,"Misaligned loads, stores, and AMOs to main memory regions that do not cross a naturally aligned 16-byte boundary are atomic.",unpriv,,,,y,?,,n,n,n,n,n,o,m,m,m,m,,,,,,n,,,,,,,
+Zawrs,Zawrs,wait on reservation set,unpriv,,Zalrsc,,y,2022,,n,n,n,n,n,?,o,o,o,o,,,,,n,dev,,,GCC 13,,,,
+Zba,bitmanip Zb[abcs],address generation,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+Zbb,bitmanip Zb[abcs],basic bitmanip,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+Zbc,bitmanip Zb[abcs],"carryless multiply (clmul, clmulh)",unpriv,,,,y,2021,,n,n,n,o,o,o,o,o,o,o,,,,,y,y,y,y,GCC 12,,y,,y
+Zbkb,crypto scalar,crypto bitmanip,unpriv,,,,y,2021,,n,n,n,p,p,o,p,p,p,p,,,,,y,y,y,y,GCC 13,,y,,y
+Zbkc,crypto scalar,crypto caryless multiply (see Zbc),unpriv,,,,y,2021,,n,n,n,p,p,o,p,p,p,p,,,,,y,y,y,y,GCC 13,,y,,y
+Zbkx,crypto scalar,"crypto crossbar permutation (xperm4, xperm8)",unpriv,,,,y,2021,,n,n,n,p,p,o,p,p,p,p,,,,,y,y,y,y,GCC 13,,y,,y
+Zbs,bitmanip Zb[abcs],single bits operations,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,y,y,y,y,GCC 12,,y,,y
+Zca,code size,C subset not including any FP,unpriv,,,,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zcb,code size,"lh/sh, sign/zero extend, not, mul",unpriv,,D,,n,2023,,n,n,n,n,n,o,m,m,m,m,,,,,n,dev,,,,,,,
+Zcd,code size,double precision FP C subset,unpriv,,F,"RV64I, RV64E",n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zcf,code size,RV32 only: single precision FP C subset,unpriv,,,Zcd,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zcmop,,"Compressed (16-bit) ""maybe"" ops -- write 0 to x[rd]; provides backward compatibility for future (mostly CFI) extensions
+",,,,,y,2024,Mar 28,n,n,n,n,n,?,m,m,m,m,,,,,,dev,,,,,,,
+Zcmp,code size,"push/pop, move a0/a1",unpriv,,Zicsr,Zcd,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zcmt,code size,jump table,unpriv,,Zfinx,D,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zdinx,FP64 in INT regs,double-precision in INT regs (implies Zfinx),unpriv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev,y,,,GCC 13,,,,
+Zfa,F,misc basic scalar FP,unpriv,zfhmin,F,,y,2023,,n,n,n,n,n,o,m,m,m,m,,,,,n,dev,,,,,,,
+Zfbfmin,Zfbfmin,Scalar BF16 FP conversions,unpriv,,"Zfh ""s"" subset",,y,2024,June,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zfh,FP16,support the IEEE 754 binary16 floating-point format,unpriv,,F,,y,2021,,n,n,n,o,o,o,o,o,o,o,,,,,n,y,y,y,GCC 13,,y,,y
+Zfhmin,FP16,Slim subset of Zfh providing only conversion and data-transfer instructions,unpriv,,Zicsr,F,y,2021,,n,n,n,m,m,o,m,m,o,o,,,,,n,y,y,y,GCC 13,,y,,y
+Zfinx,FP32 in INT regs,single-precision in INT regs,unpriv,Zhinxmin,Zfinx,F,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev,y,y,dev,GCC 13,,dev,,y
+Zhinx,FP16 in INT regs,Zdinx + 16 bit rep in base's x regs,unpriv,,Zfinx,F,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,y,,,GCC 13,,,,
+Zhinxmin,FP16 conversions in INT regs,Zdinx + 16 bit rep in base's x regs,unpriv,,,"F, Zfh",y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,y,,,GCC 13,,,,
+Zic64b,CMO,"Cache blocks must be 64 bytes in size, naturally aligned in the address space",unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,n,n,dev,y,,,dev,,y
+Zicbom,CMO,Cache-Block Management Operations,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,n,dev,dev,y,GCC 13,,dev,,y
+Zicbop,CMO,Cache-block prefetch ops,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,n,n,dev,y,GCC 13,,dev,,y
+Zicboz,CMO,Cache-block zero ops,unpriv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,,,,n,dev,dev,y,GCC 13,,dev,,y
+Ziccamoa,profiles,"Main memory regions with both the cacheability and coherence PMAs must support all atomics in the ""A"" extension",unpriv,,,,n,2023,,n,m,m,m,m,o,m,m,m,m,,,,,n,n,,,,,,,
+Ziccamoc,profiles,Main memory regions with both the cacheability and coherence PMAs must support atomics in the Zacas extension,unpriv,,,,n,2023,,n,m,m,m,m,o,o,o,o,o,,,,,n,n,,,,,,,
+Ziccif,profiles,"Main memory regions with both the cacheability and coherence PMAs must support instruction fetch, and any instruction fetches of naturally aligned power-of-2 sizes up to min(ILEN,XLEN) (i.e., 32 bits for RVA20) are atomic",unpriv,,,,n,2023,,n,m,m,m,m,o,m,m,m,m,,,,,n,n,,,,,,,
+Zicclsm,profiles,Misaligned loads and stores to main memory regions with both the cacheability and coherence PMAs must be supported.,unpriv,,,,n,2023,,o,m,m,m,m,o,m,m,m,m,,,,,n,n,,,,,,,
+Ziccrse,profiles,Main memory regions with both the cacheability and coherence PMAs must support RsrvEventual,unpriv,,Zicsr,,n,2023,,n,m,m,m,m,o,m,m,m,m,,,,,n,n,,,,,,,
+Zicfilp,,Landing Pads (companion to Zicfiss),unpriv,,,,y,2024,June,n,n,n,n,n,n,n,n,n,n,,,,,,,,,,,,,
+Zicfiss,,Shadow Stack (companion to Zicfilp),unpriv,,,,y,2024,June,n,n,n,n,n,n,n,n,n,n,,,,,,dev,,,,,,,
+Zicntr,Counters,"Unpriv standard counters (cycle, time, instret?)",unpriv,,,,y,2022,,o,m,m,m,m,o,m,m,m,m,,,,,n,y,,,,,,,
+Zicntrpmf,,(per Beeman Stong: renamed Smcntrpmf),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Zicond,Conditional Ops,Integer Conditional (Zicond) operations extension,unpriv,,,,y,2023,,n,n,n,n,n,o,m,m,m,m,,m,m,,n,y,,,,,,,
+Zicsr,Zicsr,access CSRs,unpriv,,,,y,2019,,n,m,m,m,m,o,m,m,m,m,,m,m,,n,y,,y,,,,,
+Zifencei,Zifencei,instruction fence,unpriv,,,,y,2019,,o,n,m,n,m,n,n,m,n,m,,n,m,,y,y,y,y,GCC 12,,n,,y
+Zihintntl,Zihintntl,Non-temporal locality hints,unpriv,,,,n,2023,,n,n,n,n,n,o,m,m,m,m,,m,m,,n,n,,,,,,,
+Zihintpause,Zihintpause,pause in spins loops to save power,priv,,,,y,2021,,n,n,n,m,m,o,m,m,m,m,,m,m,,n,n,dev,y,,,y,,y
+Zihpm,Priv 1.11,S mode priv instructions and state,unpriv,,,,y,2022,,o,o,o,m,m,o,m,m,m,m,,m,m,,n,dev,,,,,,,
+Zilsf,,Load/Store regsister doubleword (pair of registers),unpriv,,,,n,2024,,n,n,n,n,n,n,n,n,n,n,,?,?,,,,,,,,,,
+Zilsm*,???,Codification of esponse to misaligned loads and stores ,???,,,,n,,,n,n,n,n,n,,,,,,,,,,,,,,,,,,
+Zilsme,???,misaligned access might raise a misaligned exception (causing a fatal or contained trap),???,,,,n,,,n,n,n,n,n,,,,,,,,,,,,,,,,,,
+Zilsmea,???,misaligned access will always raise a misaligned exception (causing a fatal or contained trap),???,,,,n,,,n,n,n,n,n,,,,,,,,,,,,,,,,,,
+Zilsm<x>b,???,"misaligned loads/stores supported within a single NAPOT x-byte region (e.g., Zilsm64b), but might raise an exception if the access straddles multiple x-byte regions",???,,,,n,,,n,n,n,n,n,,,,,,,,,,,,,,,,,,
+Zilsp,,"Load/store register pair -- extension was renamed Zilsd (""d"" = ""doubleword"") ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Zimop,,"""Maybe"" ops -- write 0 to x[rd]; provides backward compatibility for future (mostly CFI) extensions
+",,,,,y,2024,Mar 28,n,n,n,n,n,?,m,m,m,m,,,,,,dev,,,,,,,
+Zjid,Zjid,instruction/data synch for JITs/Java ,unpriv,,,,n,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Zjpm,,"(split into Ssnpm, Smnpm, and Smmpm)",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Zk,crypto scalar,Standard scalar cryptography extension,unpriv,"Zbkb, Zbkc, Zbkx, Zkne, Zknd, Zknh",,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,y,y,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zkn,crypto scalar,scalar nist crypto algorithms,unpriv,,,,y,2021,,n,n,n,o,o,n,n,n,n,n,n,n,n,,y,y,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zknd,crypto scalar,NIST Suite: AES Decryption,unpriv,,,,y,2021,,n,n,n,p,p,n,n,n,n,n,,,,,y,y,y,y,GCC 13,,y,,y
+Zkne,crypto scalar,NIST Suite: AES Encryption,unpriv,,,,y,2021,,n,n,n,p,p,n,n,n,n,n,,,,,y,y,y,y,GCC 13,,y,,y
+Zknh,crypto scalar,NIST Suite: Hash Function Instructions,unpriv,,,,y,2021,,n,n,n,p,p,n,n,n,n,n,,,,,y,y,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zkr,crypto scalar,entropy CSR,unpriv,"Zbkb, Zbkc, Zbkx, Zksed, Zksh",,,y,2021,,n,n,n,n,o,n,n,n,n,n,,,,,n,n,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zks,crypto scalar,scalar ShangMi crypto algorithms,unpriv,,,,y,2021,,n,n,n,o,o,n,n,n,n,n,n,n,n,,y,y,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zksed,crypto scalar,ShangMi Suite: SM4 Block Cipher Instructions,unpriv,,,,y,2021,,n,n,n,p,p,n,n,n,n,n,,,,,y,y,y,y,GCC 13,,y,,y
+Zksh,crypto scalar,ShangMi Suite: SM3 Hash Function Instructions,unpriv,,,,y,2021,,n,n,n,p,p,n,n,n,n,n,,,,,y,y,y,y,GCC 13,,y,,y
+Zkt,crypto scalar,data-independent execution time,unpriv,,,,y,2021,,n,n,n,m,m,?,m,m,m,m,,,,,n,y,y,y,gcc 12 (only minimal support and wait c-api merge),,y,,y
+Zmmul,Zmmul,mul only subset of M,unpriv,,,,y,2022,,n,n,n,n,n,n,n,n,n,n,,,,,y,y,y,y,GCC 13,,dev,,dev
+Ztso,Ztso,total store ordering (see also Ssdtso),unpriv,,,Ssdtso,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,y,y,,,,,,,
+Zvbb,Crypto vector,Vector bitmanip basic,unpriv,Zvkb,,,y,2023,,n,n,n,n,n,o,m,m,o,o,,,,,n,dev,,,,,,,
+Zvbc,Crypto vector,Vector bitmanip carry-less multiply,unpriv,,,,y,2023,,n,n,n,n,n,o,o,o,o,o,,m,m,,n,dev,,,,,,,
+Zvbc32e,,Vector carryless MUL - add'l instructions,unpriv,,,,n,2024,,n,n,n,n,n,n,n,n,n,n,,?,?,,,,,,,,,,
+Zve32d,V,"embedded vector computation (32-bit integer, 64 bit fp)",unpriv,,F or Zfinx,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,, ,,,,,
+Zve32f,V,"embedded vector computation (32-bit integer, 32 bit fp)",unpriv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,y,y,rvv-next branch,,y,,y
+Zve32x,V,embedded vector computation (32-bit integer),unpriv,,D or Zdinx,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,y,y,rvv-next branch,,y,,y
+Zve64d,V,"embedded vector computation (64-bit integer, 64 bit fp)",unpriv,,F or Zfinx,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,y,y,rvv-next branch,,y,,y
+Zve64f,V,"embedded vector computation (64-bit integer, 32 bit fp)",unpriv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,y,y,rvv-next branch,,y,,y
+Zve64x,V,embedded vector computation (64-bit integer),unpriv,,,,y,2021,,n,n,n,n,n,n,n,n,n,n,,,,,dev?,n,y,y,rvv-next branch,,y,,y
+Zvf,Zvf,Vector IEEE FP16 arithmetic,unpriv,,,,n,2024,,n,n,n,n,n,n,n,n,n,n,,,,,n,n,,,,,,,
+Zvfbfmin,Zvfbfmin,Vector BF16 FP conversions,unpriv,,Zfbfmin,,y,2024,June,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zvfbfwma,Zvfbfwma,Vector BF16 FP widening mul-add,unpriv,,Zvfbfmin,,y,2023,June,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zvfh ,,Vector FP16 instructions,unpriv,,,,y,2023,,n,n,n,n,n,o,o,o,o,o,,,,,,n,,,,,,,
+Zvfhmin,Zvfhmin,Vector FP16 conversion instructions,unpriv,,,,y,2023,,n,n,n,n,n,o,m,m,o,o,,,,,n,n,,,,,,,
+Zvk,Crypto vector,Vector crypto (rollup),unpriv,"Zvkng, Zvksg, Zvbb, Zvbc",,,y,2023,,n,n,n,n,n,n,n,n,n,n,,m,m,,n,dev,,,,,,,
+Zvkb,Crypto vector,"Vector bitmanip -- crypto-useful subset of Zvbb (AND, ROL, ROR, REV)",unpriv,,,,y,2023,,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zvkg,Crypto vector,Vector Crypto GHASH,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,o,o,,,,,n,dev,,,,,,,
+Zvkgs,,Vector Crypto add'l extensions,unpriv,,,,n,(2024),,n,n,n,n,n,n,n,n,n,n,,?,?,,,,,,,,,,
+Zvkn,Crypto vector,Vector crypto NIST algorithms,unpriv,"Zvkned, Zvknhb, Zvkb, Zvkt",,,y,2023,,n,n,n,n,n,n,n,n,o,o,,,,,n,dev,,,,,,,
+Zvknc,Crypto vector,Vector crypto NIST: AES w/carryless multiply,unpriv,"Zvkn, Zvbc",,,y,2023,,n,n,n,n,n,n,n,n,o,o,,,,,n,dev,,,,,,,
+Zvkned,Crypto vector,Vector crypto NIST: AES,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zvknf,Zvknf,Vector crypto NIST: all-rounds AES,unpriv,,,,n,future,,n,n,n,n,n,n,n,n,n,n,,,,,n,,,,,,,,
+Zvkng,Crypto vector,Vector crypto NIST algorithms  w/GHASH,unpriv,"Zvkg, Zvkn",,,y,2023,,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zvknha,Crypto vector,Vector crypto NIST: SHA256,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zvknhb,Crypto vector,Vector crypto NIST: SHA512,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zvks,Crypto vector,Vector crypto ShangMi algorithms,unpriv,"Zvksed, Zvksh, Zvkb, Zvkt",,,y,2023,,n,n,n,n,n,n,n,n,o,o,,,,,n,dev,,,,,,,
+Zvksc,Crypto vector,Vector crypto ShangMi algorithms w/carryless multiply,unpriv,"Zvks, Zvbc",,,y,2023,,n,n,n,n,n,n,n,n,o,o,,,,,n,dev,,,,,,,
+Zvksed,Crypto vector,Vector crypto ShangMi: SM4,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zvksg,Crypto vector,Vector crypto ShangMi algorithms w/GHASH,unpriv,"Zvkg, Zvks",,,y,2023,,n,n,n,n,n,o,o,o,o,o,,,,,n,dev,,,,,,,
+Zvksh,Crypto vector,Vector crypto ShangMi: SM3 secure hash,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+Zvkt,Crypto vector,Vector data-independent execution time,unpriv,,,,y,2023,,n,n,n,n,n,n,n,n,n,n,,,,,n,dev,,,,,,,
+FINAL ROW,,do not move this row. always insert above. appreciate if you add them in the place that keeps the table sorted by column A,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,"Bill McSpadden imports columns A-H (maybe I, also?) into other tools ... so be careful not to move them (or insert new columns before H)",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+unique ratification packs (groups approved by the board often in one spec),,,,,,,,"ratification counts, by year",,,,,,,,,,,,,,,,,,,,,,,,
+2019,4,,,,,,,2019,,13,,,,,,,,,,,,,,,,QEMU through binutils columns maintained by Isaac Chute,,,,,,
+2020,0,,,,,,,2020,,0,,,,,,,,,,,,,,,SAIL column maintained by Bill Traynor and Bill McSpadden,,,,,,,
+2021,18,,,,,,,2021,,55,,,,,,,,,,,,,,ACT column maintained by Allen Baum and Bill McSpadden,,,,,,,,
+2022,6,,,,,,,2022,,7,,,,,,,,,,,,,,,,,,,,,,
+2023,11,,,,,,,2023,,50,,,,,,,,,,,,,,,,,,,,,,
+2024,10,,,,,,,2024,,30,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,(2023),,1," (expected to be ratified in 2023, but not yet ratified)",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,(2024),,6," (expected to be ratified in 2024, but not yet ratified)",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,(2025),,0," (expected to be ratified in 2025, but not yet ratified)",,,,,,,,,,,,,,,,,,,,,
