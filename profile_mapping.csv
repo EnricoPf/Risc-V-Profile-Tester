@@ -14,10 +14,10 @@ N,False,False,False,False,False,False,False,False,False,False
 Q,False,False,False,False,False,False,False,False,False,False
 P,False,False,False,False,False,False,False,False,False,False
 RERI,False,False,False,False,False,False,False,False,False,False
-RV32E,False,False,False,False,False,False,False,False,False,False
-RV32I,True,False,False,False,False,True,False,False,False,False
-RV64E,False,False,False,False,False,False,False,False,False,False
-RV64I,False,True,True,True,True,True,True,True,True,True
+rv34_e,False,False,False,False,False,False,False,False,False,False
+rv34_i,True,False,False,False,False,True,False,False,False,False
+rv64_e,False,False,False,False,False,False,False,False,False,False
+rv64_i,False,True,True,True,True,True,True,True,True,True
 S,False,False,True,False,True,True,False,True,False,True
 Sddbltrp,False,False,False,False,False,False,False,True,False,True
 Sdext,False,False,False,True,True,True,True,True,True,True
