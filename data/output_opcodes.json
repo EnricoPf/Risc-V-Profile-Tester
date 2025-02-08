@@ -1,2961 +1,2463 @@
 [
-    {
-        "instruction": "pseudo_op-slli",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=1",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-srli",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=5",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-srai",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=5",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-slli_rv32",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=1",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-srli_rv32",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=5",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-srai_rv32",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=5",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-zip",
-        "bit_ranges": [
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=1",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=1",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=1",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=1",
-                "6..2=4",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_zbkb",
-            "rv32_zk",
-            "rv32_zkn",
-            "rv32_zks"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-unzip",
-        "bit_ranges": [
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=5",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=5",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=5",
-                "6..2=4",
-                "1..0=3"
-            ],
-            [
-                "31..25=4",
-                "24..20=15",
-                "14..12=5",
-                "6..2=4",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_zbkb",
-            "rv32_zk",
-            "rv32_zkn",
-            "rv32_zks"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdcycleh",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC80",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_zicntr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdtimeh",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC81",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_zicntr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdinstreth",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC82",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv32_zicntr"
-        ]
-    },
-    {
-        "instruction": "aes32dsmi",
-        "bit_ranges": [
-            [
-                "29..25=0b10111",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknd"
-        ]
-    },
-    {
-        "instruction": "aes32dsi",
-        "bit_ranges": [
-            [
-                "29..25=0b10101",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknd"
-        ]
-    },
-    {
-        "instruction": "aes32esmi",
-        "bit_ranges": [
-            [
-                "29..25=0b10011",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zkne"
-        ]
-    },
-    {
-        "instruction": "aes32esi",
-        "bit_ranges": [
-            [
-                "29..25=0b10001",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zkne"
-        ]
-    },
-    {
-        "instruction": "sha512sum0r",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01000",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sum1r",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01001",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig0l",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01010",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig0h",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01110",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig1l",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01011",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig1h",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b01111",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv32_zknh"
-        ]
-    },
-    {
-        "instruction": "lwu",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "ld",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "sd",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x08",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "slli",
-        "bit_ranges": [
-            [
-                "31..26=0"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "srli",
-        "bit_ranges": [
-            [
-                "31..26=0"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "srai",
-        "bit_ranges": [
-            [
-                "31..26=16"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "addiw",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x06",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "slliw",
-        "bit_ranges": [
-            [
-                "31..25=0"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "srliw",
-        "bit_ranges": [
-            [
-                "31..25=0"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "sraiw",
-        "bit_ranges": [
-            [
-                "31..25=32"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "addw",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=0",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "subw",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=0",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "sllw",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=1",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "srlw",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=5",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "sraw",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=5",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_i"
-        ]
-    },
-    {
-        "instruction": "mulw",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=0",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_m"
-        ]
-    },
-    {
-        "instruction": "divw",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=4",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_m"
-        ]
-    },
-    {
-        "instruction": "divuw",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=5",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_m"
-        ]
-    },
-    {
-        "instruction": "remw",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=6",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_m"
-        ]
-    },
-    {
-        "instruction": "remuw",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=7",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_m"
-        ]
-    },
-    {
-        "instruction": "clzw",
-        "bit_ranges": [
-            [
-                "31..20=0x600",
-                "14..12=1",
-                "6..2=0x06",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "ctzw",
-        "bit_ranges": [
-            [
-                "31..20=0x601",
-                "14..12=1",
-                "6..2=0x06",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "cpopw",
-        "bit_ranges": [
-            [
-                "31..20=0x602",
-                "14..12=1",
-                "6..2=0x06",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "rolw",
-        "bit_ranges": [
-            [
-                "31..25=0x30",
-                "14..12=1",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "rorw",
-        "bit_ranges": [
-            [
-                "31..25=0x30",
-                "14..12=5",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "roriw",
-        "bit_ranges": [
-            [
-                "31..25=0x30"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "rori",
-        "bit_ranges": [
-            [
-                "31..26=0x18"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rev8",
-        "bit_ranges": [
-            [
-                "31..20=0x6B8",
-                "14..12=5",
-                "6..0=0x13"
-            ],
-            [
-                "31..20=0x6B8",
-                "14..12=5",
-                "6..0=0x13"
-            ],
-            [
-                "31..20=0x6B8",
-                "14..12=5",
-                "6..0=0x13"
-            ],
-            [
-                "31..20=0x6B8",
-                "14..12=5",
-                "6..0=0x13"
-            ],
-            [
-                "31..20=0x6B8",
-                "14..12=5",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zbb",
-            "rv64_zbkb",
-            "rv64_zk",
-            "rv64_zkn",
-            "rv64_zks"
-        ]
-    },
-    {
-        "instruction": "packw",
-        "bit_ranges": [
-            [
-                "31..25=4",
-                "14..12=4",
-                "6..2=0x0E",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv64_zbkb"
-        ]
-    },
-    {
-        "instruction": "bclri",
-        "bit_ranges": [
-            [
-                "31..26=0x12"
-            ]
-        ],
-        "extension": [
-            "rv64_zbs"
-        ]
-    },
-    {
-        "instruction": "bexti",
-        "bit_ranges": [
-            [
-                "31..26=0x12"
-            ]
-        ],
-        "extension": [
-            "rv64_zbs"
-        ]
-    },
-    {
-        "instruction": "binvi",
-        "bit_ranges": [
-            [
-                "31..26=0x1a"
-            ]
-        ],
-        "extension": [
-            "rv64_zbs"
-        ]
-    },
-    {
-        "instruction": "bseti",
-        "bit_ranges": [
-            [
-                "31..26=0x0a"
-            ]
-        ],
-        "extension": [
-            "rv64_zbs"
-        ]
-    },
-    {
-        "instruction": "aes64dsm",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11111",
-                "14..12=0b000",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv64_zknd"
-        ]
-    },
-    {
-        "instruction": "aes64ds",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11101",
-                "14..12=0b000",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv64_zknd"
-        ]
-    },
-    {
-        "instruction": "aes64ks1i",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11000",
-                "24=1",
-                "14..12=0b001",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknd"
-        ]
-    },
-    {
-        "instruction": "aes64im",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11000",
-                "24..20=0b0000",
-                "14..12=0b001",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknd"
-        ]
-    },
-    {
-        "instruction": "aes64ks2",
-        "bit_ranges": [
-            [
-                "31..30=1",
-                "29..25=0b11111",
-                "14..12=0b000",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv64_zknd"
-        ]
-    },
-    {
-        "instruction": "aes64esm",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11011",
-                "14..12=0b000",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv64_zkne"
-        ]
-    },
-    {
-        "instruction": "aes64es",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b11001",
-                "14..12=0b000",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv64_zkne"
-        ]
-    },
-    {
-        "instruction": "sha512sum0",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00100",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sum1",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00101",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig0",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00110",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknh"
-        ]
-    },
-    {
-        "instruction": "sha512sig1",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00111",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv64_zknh"
-        ]
-    },
-    {
-        "instruction": "fld",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x01",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_d"
-        ]
-    },
-    {
-        "instruction": "fsd",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x09",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_d"
-        ]
-    },
-    {
-        "instruction": "flw",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x01",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "fsw",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x09",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-frflags",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0x001",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-fsflags",
-        "bit_ranges": [
-            [
-                "31..20=0x001",
-                "14..12=1",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-fsflagsi",
-        "bit_ranges": [
-            [
-                "31..20=0x001",
-                "14..12=5",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-frrm",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0x002",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-fsrm",
-        "bit_ranges": [
-            [
-                "31..20=0x002",
-                "14..12=1",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-fsrmi",
-        "bit_ranges": [
-            [
-                "31..20=0x002",
-                "14..12=5",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-fscsr",
-        "bit_ranges": [
-            [
-                "31..20=0x003",
-                "14..12=1",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-frcsr",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0x003",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_f"
-        ]
-    },
-    {
-        "instruction": "lui",
-        "bit_ranges": [
-            [
-                "6..2=0x0D",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "auipc",
-        "bit_ranges": [
-            [
-                "6..2=0x05",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "jal",
-        "bit_ranges": [
-            [
-                "6..2=0x1b",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "jalr",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x19",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "beq",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "bne",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "blt",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "bge",
-        "bit_ranges": [
-            [
-                "14..12=5",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "bltu",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "bgeu",
-        "bit_ranges": [
-            [
-                "14..12=7",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "lb",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "lh",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "lw",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "lbu",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "lhu",
-        "bit_ranges": [
-            [
-                "14..12=5",
-                "6..2=0x00",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sb",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x08",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sh",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x08",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sw",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x08",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "addi",
-        "bit_ranges": [
-            [
-                "14..12=0",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "slti",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sltiu",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "xori",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "ori",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "andi",
-        "bit_ranges": [
-            [
-                "14..12=7",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "add",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=0",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sub",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=0",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sll",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "slt",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sltu",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=3",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "xor",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "srl",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "sra",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "or",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=6",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "and",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "14..12=7",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "fence",
-        "bit_ranges": [
-            [
-                "14..12=0"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-pause",
-        "bit_ranges": [
-            [
-                "27..24=1",
-                "23..20=0",
-                "19..15=0",
-                "14..12=0",
-                "11..7=0",
-                "6..2=0x03",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "ecall",
-        "bit_ranges": [
-            [
-                "31..20=0x000",
-                "19..7=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "ebreak",
-        "bit_ranges": [
-            [
-                "31..20=0x001",
-                "19..7=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-scall",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0x000",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-sbreak",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0x001",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-mv",
-        "bit_ranges": [
-            [
-                "31..20=0",
-                "14..12=0",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-neg",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "24..20=0x0",
-                "14..12=0",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-nop",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "14..12=0",
-                "11..7=0",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-ret",
-        "bit_ranges": [
-            [
-                "19..15=0x01",
-                "14..12=0",
-                "11..7=0",
-                "6..2=0x19",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bleu",
-        "bit_ranges": [
-            [
-                "14..12=7",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bgtu",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-ble",
-        "bit_ranges": [
-            [
-                "14..12=5",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bgez",
-        "bit_ranges": [
-            [
-                "24..20=0x0",
-                "14..12=5",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-blez",
-        "bit_ranges": [
-            [
-                "19..15=0x0",
-                "14..12=5",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bgt",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bgtz",
-        "bit_ranges": [
-            [
-                "19..15=0x0",
-                "14..12=4",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bltz",
-        "bit_ranges": [
-            [
-                "24..20=0x0",
-                "14..12=4",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-bnez",
-        "bit_ranges": [
-            [
-                "24..20=0x0",
-                "14..12=1",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-beqz",
-        "bit_ranges": [
-            [
-                "24..20=0x0",
-                "14..12=0",
-                "6..2=0x18",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-seqz",
-        "bit_ranges": [
-            [
-                "31..20=1",
-                "14..12=3",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-snez",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "19..15=0x0",
-                "14..12=3",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-sltz",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "24..20=0x0",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-sgtz",
-        "bit_ranges": [
-            [
-                "31..25=0",
-                "19..15=0x0",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-jalr",
-        "bit_ranges": [
-            [
-                "31..20=0",
-                "14..12=0",
-                "11..7=0x01",
-                "6..2=0x19",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-jr",
-        "bit_ranges": [
-            [
-                "31..20=0",
-                "14..12=0",
-                "11..7=0x0",
-                "6..2=0x19",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-jal",
-        "bit_ranges": [
-            [
-                "11..7=0x01",
-                "6..2=0x1b",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-j",
-        "bit_ranges": [
-            [
-                "11..7=0x0",
-                "6..2=0x1b",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_i"
-        ]
-    },
-    {
-        "instruction": "mul",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=0",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "mulh",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "mulhsu",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "mulhu",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=3",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "div",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "divu",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "rem",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=6",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "remu",
-        "bit_ranges": [
-            [
-                "31..25=1",
-                "14..12=7",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_m"
-        ]
-    },
-    {
-        "instruction": "flq",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x01",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_q"
-        ]
-    },
-    {
-        "instruction": "fsq",
-        "bit_ranges": [
-            [
-                "14..12=4",
-                "6..2=0x09",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_q"
-        ]
-    },
-    {
-        "instruction": "sret",
-        "bit_ranges": [
-            [
-                "11..7=0",
-                "19..15=0",
-                "31..20=0x102",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_s"
-        ]
-    },
-    {
-        "instruction": "dret",
-        "bit_ranges": [
-            [
-                "11..7=0",
-                "19..15=0",
-                "31..20=0x7b2",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_sdext"
-        ]
-    },
-    {
-        "instruction": "mret",
-        "bit_ranges": [
-            [
-                "11..7=0",
-                "19..15=0",
-                "31..20=0x302",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_system"
-        ]
-    },
-    {
-        "instruction": "wfi",
-        "bit_ranges": [
-            [
-                "11..7=0",
-                "19..15=0",
-                "31..20=0x105",
-                "14..12=0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_system"
-        ]
-    },
-    {
-        "instruction": "vsetivli",
-        "bit_ranges": [
-            [
-                "31=1",
-                "30=1"
-            ]
-        ],
-        "extension": [
-            "rv_v"
-        ]
-    },
-    {
-        "instruction": "vsetvli",
-        "bit_ranges": [
-            [
-                "31=0"
-            ]
-        ],
-        "extension": [
-            "rv_v"
-        ]
-    },
-    {
-        "instruction": "vsetvl",
-        "bit_ranges": [
-            [
-                "31=1",
-                "30..25=0x0"
-            ]
-        ],
-        "extension": [
-            "rv_v"
-        ]
-    },
-    {
-        "instruction": "sh1add",
-        "bit_ranges": [
-            [
-                "31..25=16",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zba"
-        ]
-    },
-    {
-        "instruction": "sh2add",
-        "bit_ranges": [
-            [
-                "31..25=16",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zba"
-        ]
-    },
-    {
-        "instruction": "sh3add",
-        "bit_ranges": [
-            [
-                "31..25=16",
-                "14..12=6",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zba"
-        ]
-    },
-    {
-        "instruction": "andn",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=7",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "orn",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=6",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "xnor",
-        "bit_ranges": [
-            [
-                "31..25=32",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "clz",
-        "bit_ranges": [
-            [
-                "31..20=0x600",
-                "14..12=1",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "ctz",
-        "bit_ranges": [
-            [
-                "31..20=0x601",
-                "14..12=1",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "cpop",
-        "bit_ranges": [
-            [
-                "31..20=0x602",
-                "14..12=1",
-                "6..2=0x04",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "max",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=6",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "maxu",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=7",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "min",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "minu",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "rol",
-        "bit_ranges": [
-            [
-                "31..25=0x30",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "ror",
-        "bit_ranges": [
-            [
-                "31..25=0x30",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbb"
-        ]
-    },
-    {
-        "instruction": "clmul",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbc"
-        ]
-    },
-    {
-        "instruction": "clmulr",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbc"
-        ]
-    },
-    {
-        "instruction": "clmulh",
-        "bit_ranges": [
-            [
-                "31..25=5",
-                "14..12=3",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbc"
-        ]
-    },
-    {
-        "instruction": "pack",
-        "bit_ranges": [
-            [
-                "31..25=4",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbkb"
-        ]
-    },
-    {
-        "instruction": "packh",
-        "bit_ranges": [
-            [
-                "31..25=4",
-                "14..12=7",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbkb"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-brev8",
-        "bit_ranges": [
-            [
-                "31..20=0x687",
-                "14..12=5",
-                "6..2=0x4",
-                "1..0=0x3"
-            ],
-            [
-                "31..20=0x687",
-                "14..12=5",
-                "6..2=0x4",
-                "1..0=0x3"
-            ],
-            [
-                "31..20=0x687",
-                "14..12=5",
-                "6..2=0x4",
-                "1..0=0x3"
-            ],
-            [
-                "31..20=0x687",
-                "14..12=5",
-                "6..2=0x4",
-                "1..0=0x3"
-            ]
-        ],
-        "extension": [
-            "rv_zbkb",
-            "rv_zk",
-            "rv_zkn",
-            "rv_zks"
-        ]
-    },
-    {
-        "instruction": "xperm4",
-        "bit_ranges": [
-            [
-                "31..25=20",
-                "14..12=2",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbkx"
-        ]
-    },
-    {
-        "instruction": "xperm8",
-        "bit_ranges": [
-            [
-                "31..25=20",
-                "14..12=4",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbkx"
-        ]
-    },
-    {
-        "instruction": "bclr",
-        "bit_ranges": [
-            [
-                "31..25=0x24",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbs"
-        ]
-    },
-    {
-        "instruction": "bext",
-        "bit_ranges": [
-            [
-                "31..25=36",
-                "14..12=5",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbs"
-        ]
-    },
-    {
-        "instruction": "binv",
-        "bit_ranges": [
-            [
-                "31..25=52",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbs"
-        ]
-    },
-    {
-        "instruction": "bset",
-        "bit_ranges": [
-            [
-                "31..25=20",
-                "14..12=1",
-                "6..2=0x0C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zbs"
-        ]
-    },
-    {
-        "instruction": "flh",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x01",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zfh"
-        ]
-    },
-    {
-        "instruction": "fsh",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x09",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zfh"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdcycle",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC00",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicntr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdtime",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC01",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicntr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-rdinstret",
-        "bit_ranges": [
-            [
-                "19..15=0",
-                "31..20=0xC02",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicntr"
-        ]
-    },
-    {
-        "instruction": "csrrw",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "csrrs",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "csrrc",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "csrrwi",
-        "bit_ranges": [
-            [
-                "14..12=5",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "csrrsi",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "csrrci",
-        "bit_ranges": [
-            [
-                "14..12=7",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrr",
-        "bit_ranges": [
-            [
-                "19..15=0x0",
-                "14..12=2",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrw",
-        "bit_ranges": [
-            [
-                "14..12=1",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrs",
-        "bit_ranges": [
-            [
-                "14..12=2",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrc",
-        "bit_ranges": [
-            [
-                "14..12=3",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrwi",
-        "bit_ranges": [
-            [
-                "14..12=5",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrsi",
-        "bit_ranges": [
-            [
-                "14..12=6",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "pseudo_op-csrci",
-        "bit_ranges": [
-            [
-                "14..12=7",
-                "11..7=0x0",
-                "6..2=0x1C",
-                "1..0=3"
-            ]
-        ],
-        "extension": [
-            "rv_zicsr"
-        ]
-    },
-    {
-        "instruction": "sha256sum0",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00000",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zknh"
-        ]
-    },
-    {
-        "instruction": "sha256sum1",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00001",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zknh"
-        ]
-    },
-    {
-        "instruction": "sha256sig0",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00010",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zknh"
-        ]
-    },
-    {
-        "instruction": "sha256sig1",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b00011",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zknh"
-        ]
-    },
-    {
-        "instruction": "sm4ed",
-        "bit_ranges": [
-            [
-                "29..25=0b11000",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv_zksed"
-        ]
-    },
-    {
-        "instruction": "sm4ks",
-        "bit_ranges": [
-            [
-                "29..25=0b11010",
-                "14..12=0",
-                "6..0=0x33"
-            ]
-        ],
-        "extension": [
-            "rv_zksed"
-        ]
-    },
-    {
-        "instruction": "sm3p0",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b01000",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zksh"
-        ]
-    },
-    {
-        "instruction": "sm3p1",
-        "bit_ranges": [
-            [
-                "31..30=0",
-                "29..25=0b01000",
-                "24..20=0b01001",
-                "14..12=1",
-                "6..0=0x13"
-            ]
-        ],
-        "extension": [
-            "rv_zksh"
-        ]
-    }
+  {
+    "instruction": "pseudo_op-slli",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=1",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-srli",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=5",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-srai",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=5",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-slli_rv32",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=1",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-srli_rv32",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=5",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-srai_rv32",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=5",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-zip",
+    "bit_ranges": [
+      "31..25=4",
+      "24..20=15",
+      "14..12=1",
+      "6..2=4",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_zbkb",
+      "rv32_zk",
+      "rv32_zkn",
+      "rv32_zks"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-unzip",
+    "bit_ranges": [
+      "31..25=4",
+      "24..20=15",
+      "14..12=5",
+      "6..2=4",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_zbkb",
+      "rv32_zk",
+      "rv32_zkn",
+      "rv32_zks"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdcycleh",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC80",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_zicntr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdtimeh",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC81",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_zicntr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdinstreth",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC82",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv32_zicntr"
+    ]
+  },
+  {
+    "instruction": "aes32dsmi",
+    "bit_ranges": [
+      "29..25=0b10111",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknd"
+    ]
+  },
+  {
+    "instruction": "aes32dsi",
+    "bit_ranges": [
+      "29..25=0b10101",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknd"
+    ]
+  },
+  {
+    "instruction": "aes32esmi",
+    "bit_ranges": [
+      "29..25=0b10011",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zkne"
+    ]
+  },
+  {
+    "instruction": "aes32esi",
+    "bit_ranges": [
+      "29..25=0b10001",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zkne"
+    ]
+  },
+  {
+    "instruction": "sha512sum0r",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01000",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sum1r",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01001",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig0l",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01010",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig0h",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01110",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig1l",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01011",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig1h",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b01111",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv32_zknh"
+    ]
+  },
+  {
+    "instruction": "lwu",
+    "bit_ranges": [
+      "14..12=6",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "ld",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "sd",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x08",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "slli",
+    "bit_ranges": [
+      "31..26=0"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "srli",
+    "bit_ranges": [
+      "31..26=0"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "srai",
+    "bit_ranges": [
+      "31..26=16"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "addiw",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x06",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "slliw",
+    "bit_ranges": [
+      "31..25=0"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "srliw",
+    "bit_ranges": [
+      "31..25=0"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "sraiw",
+    "bit_ranges": [
+      "31..25=32"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "addw",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=0",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "subw",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=0",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "sllw",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=1",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "srlw",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=5",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "sraw",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=5",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_i"
+    ]
+  },
+  {
+    "instruction": "mulw",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=0",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_m"
+    ]
+  },
+  {
+    "instruction": "divw",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=4",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_m"
+    ]
+  },
+  {
+    "instruction": "divuw",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=5",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_m"
+    ]
+  },
+  {
+    "instruction": "remw",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=6",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_m"
+    ]
+  },
+  {
+    "instruction": "remuw",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=7",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_m"
+    ]
+  },
+  {
+    "instruction": "clzw",
+    "bit_ranges": [
+      "31..20=0x600",
+      "14..12=1",
+      "6..2=0x06",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "ctzw",
+    "bit_ranges": [
+      "31..20=0x601",
+      "14..12=1",
+      "6..2=0x06",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "cpopw",
+    "bit_ranges": [
+      "31..20=0x602",
+      "14..12=1",
+      "6..2=0x06",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "rolw",
+    "bit_ranges": [
+      "31..25=0x30",
+      "14..12=1",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "rorw",
+    "bit_ranges": [
+      "31..25=0x30",
+      "14..12=5",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "roriw",
+    "bit_ranges": [
+      "31..25=0x30"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "rori",
+    "bit_ranges": [
+      "31..26=0x18"
+    ],
+    "extension": [
+      "rv64_zbb"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rev8",
+    "bit_ranges": [
+      "31..20=0x6B8",
+      "14..12=5",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zbb",
+      "rv64_zbkb",
+      "rv64_zk",
+      "rv64_zkn",
+      "rv64_zks"
+    ]
+  },
+  {
+    "instruction": "packw",
+    "bit_ranges": [
+      "31..25=4",
+      "14..12=4",
+      "6..2=0x0E",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv64_zbkb"
+    ]
+  },
+  {
+    "instruction": "bclri",
+    "bit_ranges": [
+      "31..26=0x12"
+    ],
+    "extension": [
+      "rv64_zbs"
+    ]
+  },
+  {
+    "instruction": "bexti",
+    "bit_ranges": [
+      "31..26=0x12"
+    ],
+    "extension": [
+      "rv64_zbs"
+    ]
+  },
+  {
+    "instruction": "binvi",
+    "bit_ranges": [
+      "31..26=0x1a"
+    ],
+    "extension": [
+      "rv64_zbs"
+    ]
+  },
+  {
+    "instruction": "bseti",
+    "bit_ranges": [
+      "31..26=0x0a"
+    ],
+    "extension": [
+      "rv64_zbs"
+    ]
+  },
+  {
+    "instruction": "aes64dsm",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11111",
+      "14..12=0b000",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv64_zknd"
+    ]
+  },
+  {
+    "instruction": "aes64ds",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11101",
+      "14..12=0b000",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv64_zknd"
+    ]
+  },
+  {
+    "instruction": "aes64ks1i",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11000",
+      "24=1",
+      "14..12=0b001",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknd"
+    ]
+  },
+  {
+    "instruction": "aes64im",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11000",
+      "24..20=0b0000",
+      "14..12=0b001",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknd"
+    ]
+  },
+  {
+    "instruction": "aes64ks2",
+    "bit_ranges": [
+      "31..30=1",
+      "29..25=0b11111",
+      "14..12=0b000",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv64_zknd"
+    ]
+  },
+  {
+    "instruction": "aes64esm",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11011",
+      "14..12=0b000",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv64_zkne"
+    ]
+  },
+  {
+    "instruction": "aes64es",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b11001",
+      "14..12=0b000",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv64_zkne"
+    ]
+  },
+  {
+    "instruction": "sha512sum0",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00100",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sum1",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00101",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig0",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00110",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknh"
+    ]
+  },
+  {
+    "instruction": "sha512sig1",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00111",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv64_zknh"
+    ]
+  },
+  {
+    "instruction": "fld",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x01",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_d"
+    ]
+  },
+  {
+    "instruction": "fsd",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x09",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_d"
+    ]
+  },
+  {
+    "instruction": "flw",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x01",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "fsw",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x09",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-frflags",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0x001",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-fsflags",
+    "bit_ranges": [
+      "31..20=0x001",
+      "14..12=1",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-fsflagsi",
+    "bit_ranges": [
+      "31..20=0x001",
+      "14..12=5",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-frrm",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0x002",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-fsrm",
+    "bit_ranges": [
+      "31..20=0x002",
+      "14..12=1",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-fsrmi",
+    "bit_ranges": [
+      "31..20=0x002",
+      "14..12=5",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-fscsr",
+    "bit_ranges": [
+      "31..20=0x003",
+      "14..12=1",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-frcsr",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0x003",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_f"
+    ]
+  },
+  {
+    "instruction": "lui",
+    "bit_ranges": [
+      "6..2=0x0D",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "auipc",
+    "bit_ranges": [
+      "6..2=0x05",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "jal",
+    "bit_ranges": [
+      "6..2=0x1b",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "jalr",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x19",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "beq",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "bne",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "blt",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "bge",
+    "bit_ranges": [
+      "14..12=5",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "bltu",
+    "bit_ranges": [
+      "14..12=6",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "bgeu",
+    "bit_ranges": [
+      "14..12=7",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "lb",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "lh",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "lw",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "lbu",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "lhu",
+    "bit_ranges": [
+      "14..12=5",
+      "6..2=0x00",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sb",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x08",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sh",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x08",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sw",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x08",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "addi",
+    "bit_ranges": [
+      "14..12=0",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "slti",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sltiu",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "xori",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "ori",
+    "bit_ranges": [
+      "14..12=6",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "andi",
+    "bit_ranges": [
+      "14..12=7",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "add",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=0",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sub",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=0",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sll",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "slt",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sltu",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=3",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "xor",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "srl",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "sra",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "or",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=6",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "and",
+    "bit_ranges": [
+      "31..25=0",
+      "14..12=7",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "fence",
+    "bit_ranges": [
+      "14..12=0"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-pause",
+    "bit_ranges": [
+      "27..24=1",
+      "23..20=0",
+      "19..15=0",
+      "14..12=0",
+      "11..7=0",
+      "6..2=0x03",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "ecall",
+    "bit_ranges": [
+      "31..20=0x000",
+      "19..7=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "ebreak",
+    "bit_ranges": [
+      "31..20=0x001",
+      "19..7=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-scall",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0x000",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-sbreak",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0x001",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-mv",
+    "bit_ranges": [
+      "31..20=0",
+      "14..12=0",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-neg",
+    "bit_ranges": [
+      "31..25=32",
+      "24..20=0x0",
+      "14..12=0",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-nop",
+    "bit_ranges": [
+      "19..15=0",
+      "14..12=0",
+      "11..7=0",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-ret",
+    "bit_ranges": [
+      "19..15=0x01",
+      "14..12=0",
+      "11..7=0",
+      "6..2=0x19",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bleu",
+    "bit_ranges": [
+      "14..12=7",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bgtu",
+    "bit_ranges": [
+      "14..12=6",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-ble",
+    "bit_ranges": [
+      "14..12=5",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bgez",
+    "bit_ranges": [
+      "24..20=0x0",
+      "14..12=5",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-blez",
+    "bit_ranges": [
+      "19..15=0x0",
+      "14..12=5",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bgt",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bgtz",
+    "bit_ranges": [
+      "19..15=0x0",
+      "14..12=4",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bltz",
+    "bit_ranges": [
+      "24..20=0x0",
+      "14..12=4",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-bnez",
+    "bit_ranges": [
+      "24..20=0x0",
+      "14..12=1",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-beqz",
+    "bit_ranges": [
+      "24..20=0x0",
+      "14..12=0",
+      "6..2=0x18",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-seqz",
+    "bit_ranges": [
+      "31..20=1",
+      "14..12=3",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-snez",
+    "bit_ranges": [
+      "31..25=0",
+      "19..15=0x0",
+      "14..12=3",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-sltz",
+    "bit_ranges": [
+      "31..25=0",
+      "24..20=0x0",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-sgtz",
+    "bit_ranges": [
+      "31..25=0",
+      "19..15=0x0",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-jalr",
+    "bit_ranges": [
+      "31..20=0",
+      "14..12=0",
+      "11..7=0x01",
+      "6..2=0x19",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-jr",
+    "bit_ranges": [
+      "31..20=0",
+      "14..12=0",
+      "11..7=0x0",
+      "6..2=0x19",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-jal",
+    "bit_ranges": [
+      "11..7=0x01",
+      "6..2=0x1b",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-j",
+    "bit_ranges": [
+      "11..7=0x0",
+      "6..2=0x1b",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_i"
+    ]
+  },
+  {
+    "instruction": "mul",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=0",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "mulh",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "mulhsu",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "mulhu",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=3",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "div",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "divu",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "rem",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=6",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "remu",
+    "bit_ranges": [
+      "31..25=1",
+      "14..12=7",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_m"
+    ]
+  },
+  {
+    "instruction": "flq",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x01",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_q"
+    ]
+  },
+  {
+    "instruction": "fsq",
+    "bit_ranges": [
+      "14..12=4",
+      "6..2=0x09",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_q"
+    ]
+  },
+  {
+    "instruction": "sret",
+    "bit_ranges": [
+      "11..7=0",
+      "19..15=0",
+      "31..20=0x102",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_s"
+    ]
+  },
+  {
+    "instruction": "dret",
+    "bit_ranges": [
+      "11..7=0",
+      "19..15=0",
+      "31..20=0x7b2",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_sdext"
+    ]
+  },
+  {
+    "instruction": "mret",
+    "bit_ranges": [
+      "11..7=0",
+      "19..15=0",
+      "31..20=0x302",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_system"
+    ]
+  },
+  {
+    "instruction": "wfi",
+    "bit_ranges": [
+      "11..7=0",
+      "19..15=0",
+      "31..20=0x105",
+      "14..12=0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_system"
+    ]
+  },
+  {
+    "instruction": "vsetivli",
+    "bit_ranges": [
+      "31=1",
+      "30=1"
+    ],
+    "extension": [
+      "rv_v"
+    ]
+  },
+  {
+    "instruction": "vsetvli",
+    "bit_ranges": [
+      "31=0"
+    ],
+    "extension": [
+      "rv_v"
+    ]
+  },
+  {
+    "instruction": "vsetvl",
+    "bit_ranges": [
+      "31=1",
+      "30..25=0x0"
+    ],
+    "extension": [
+      "rv_v"
+    ]
+  },
+  {
+    "instruction": "sh1add",
+    "bit_ranges": [
+      "31..25=16",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zba"
+    ]
+  },
+  {
+    "instruction": "sh2add",
+    "bit_ranges": [
+      "31..25=16",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zba"
+    ]
+  },
+  {
+    "instruction": "sh3add",
+    "bit_ranges": [
+      "31..25=16",
+      "14..12=6",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zba"
+    ]
+  },
+  {
+    "instruction": "andn",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=7",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "orn",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=6",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "xnor",
+    "bit_ranges": [
+      "31..25=32",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "clz",
+    "bit_ranges": [
+      "31..20=0x600",
+      "14..12=1",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "ctz",
+    "bit_ranges": [
+      "31..20=0x601",
+      "14..12=1",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "cpop",
+    "bit_ranges": [
+      "31..20=0x602",
+      "14..12=1",
+      "6..2=0x04",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "max",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=6",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "maxu",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=7",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "min",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "minu",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "rol",
+    "bit_ranges": [
+      "31..25=0x30",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "ror",
+    "bit_ranges": [
+      "31..25=0x30",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbb"
+    ]
+  },
+  {
+    "instruction": "clmul",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbc"
+    ]
+  },
+  {
+    "instruction": "clmulr",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbc"
+    ]
+  },
+  {
+    "instruction": "clmulh",
+    "bit_ranges": [
+      "31..25=5",
+      "14..12=3",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbc"
+    ]
+  },
+  {
+    "instruction": "pack",
+    "bit_ranges": [
+      "31..25=4",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbkb"
+    ]
+  },
+  {
+    "instruction": "packh",
+    "bit_ranges": [
+      "31..25=4",
+      "14..12=7",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbkb"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-brev8",
+    "bit_ranges": [
+      "31..20=0x687",
+      "14..12=5",
+      "6..2=0x4",
+      "1..0=0x3"
+    ],
+    "extension": [
+      "rv_zbkb",
+      "rv_zk",
+      "rv_zkn",
+      "rv_zks"
+    ]
+  },
+  {
+    "instruction": "xperm4",
+    "bit_ranges": [
+      "31..25=20",
+      "14..12=2",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbkx"
+    ]
+  },
+  {
+    "instruction": "xperm8",
+    "bit_ranges": [
+      "31..25=20",
+      "14..12=4",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbkx"
+    ]
+  },
+  {
+    "instruction": "bclr",
+    "bit_ranges": [
+      "31..25=0x24",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbs"
+    ]
+  },
+  {
+    "instruction": "bext",
+    "bit_ranges": [
+      "31..25=36",
+      "14..12=5",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbs"
+    ]
+  },
+  {
+    "instruction": "binv",
+    "bit_ranges": [
+      "31..25=52",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbs"
+    ]
+  },
+  {
+    "instruction": "bset",
+    "bit_ranges": [
+      "31..25=20",
+      "14..12=1",
+      "6..2=0x0C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zbs"
+    ]
+  },
+  {
+    "instruction": "flh",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x01",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zfh"
+    ]
+  },
+  {
+    "instruction": "fsh",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x09",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zfh"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdcycle",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC00",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicntr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdtime",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC01",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicntr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-rdinstret",
+    "bit_ranges": [
+      "19..15=0",
+      "31..20=0xC02",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicntr"
+    ]
+  },
+  {
+    "instruction": "csrrw",
+    "bit_ranges": [
+      "14..12=1",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "csrrs",
+    "bit_ranges": [
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "csrrc",
+    "bit_ranges": [
+      "14..12=3",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "csrrwi",
+    "bit_ranges": [
+      "14..12=5",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "csrrsi",
+    "bit_ranges": [
+      "14..12=6",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "csrrci",
+    "bit_ranges": [
+      "14..12=7",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrr",
+    "bit_ranges": [
+      "19..15=0x0",
+      "14..12=2",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrw",
+    "bit_ranges": [
+      "14..12=1",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrs",
+    "bit_ranges": [
+      "14..12=2",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrc",
+    "bit_ranges": [
+      "14..12=3",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrwi",
+    "bit_ranges": [
+      "14..12=5",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrsi",
+    "bit_ranges": [
+      "14..12=6",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "pseudo_op-csrci",
+    "bit_ranges": [
+      "14..12=7",
+      "11..7=0x0",
+      "6..2=0x1C",
+      "1..0=3"
+    ],
+    "extension": [
+      "rv_zicsr"
+    ]
+  },
+  {
+    "instruction": "sha256sum0",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00000",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zknh"
+    ]
+  },
+  {
+    "instruction": "sha256sum1",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00001",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zknh"
+    ]
+  },
+  {
+    "instruction": "sha256sig0",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00010",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zknh"
+    ]
+  },
+  {
+    "instruction": "sha256sig1",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b00011",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zknh"
+    ]
+  },
+  {
+    "instruction": "sm4ed",
+    "bit_ranges": [
+      "29..25=0b11000",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv_zksed"
+    ]
+  },
+  {
+    "instruction": "sm4ks",
+    "bit_ranges": [
+      "29..25=0b11010",
+      "14..12=0",
+      "6..0=0x33"
+    ],
+    "extension": [
+      "rv_zksed"
+    ]
+  },
+  {
+    "instruction": "sm3p0",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b01000",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zksh"
+    ]
+  },
+  {
+    "instruction": "sm3p1",
+    "bit_ranges": [
+      "31..30=0",
+      "29..25=0b01000",
+      "24..20=0b01001",
+      "14..12=1",
+      "6..0=0x13"
+    ],
+    "extension": [
+      "rv_zksh"
+    ]
+  }
 ]
