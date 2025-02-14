@@ -6,6 +6,7 @@ import numpy as np   # For array operations
 import re           # For pattern matching
 import os           # For file operations
 from typing import List, Dict, Any, Optional
+import sys
 
 class RiscVInstructionAnalyzer:
     """
@@ -209,8 +210,10 @@ def main():
     # Initialize analyzer
     analyzer = RiscVInstructionAnalyzer()
     
-    # Analyze a test hex file
-    test_file = './data/tests/memory/003-and.hex'
+    # Get test file from command line args or use default
+    test_file = sys.argv[1] if len(sys.argv) > 1 else './data/tests/memory/003-and.hex'
+    
+    # Analyze the hex file
     results = analyzer.analyze_hex_file(test_file)
     
     # Print results
@@ -224,4 +227,4 @@ def main():
     print(f"Smallest compatible profile: {results['smallest_profile']}")
 
 if __name__ == "__main__":
-    main() 
+    main()
